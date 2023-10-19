@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/gin-contrib/sessions"
-	"github.com/gin-contrib/sessions/memcached"
 	"github.com/gin-gonic/gin"
 	"github.com/memcachier/mc"
+	"github.com/nextgis/go-sessions"
+	"github.com/nextgis/go-sessions/memcached"
 )
 
 func main() {

@@ -3,9 +3,8 @@ package redis
 import (
 	"errors"
 
-	"github.com/boj/redistore"
-	"github.com/gin-contrib/sessions"
 	"github.com/gomodule/redigo/redis"
+	"github.com/nextgis/go-sessions"
 )
 
 type Store interface {
@@ -26,7 +25,7 @@ type Store interface {
 // It is recommended to use an authentication key with 32 or 64 bytes. The encryption key,
 // if set, must be either 16, 24, or 32 bytes to select AES-128, AES-192, or AES-256 modes.
 func NewStore(size int, network, address, password string, keyPairs ...[]byte) (Store, error) {
-	s, err := redistore.NewRediStore(size, network, address, password, keyPairs...)
+	s, err := NewRediStore(size, network, address, password, keyPairs...)
 	if err != nil {
 		return nil, err
 	}
@@ -38,7 +37,7 @@ func NewStore(size int, network, address, password string, keyPairs ...[]byte) (
 //
 // Ref: https://godoc.org/github.com/boj/redistore#NewRediStoreWithDB
 func NewStoreWithDB(size int, network, address, password, DB string, keyPairs ...[]byte) (Store, error) {
-	s, err := redistore.NewRediStoreWithDB(size, network, address, password, DB, keyPairs...)
+	s, err := NewRediStoreWithDB(size, network, address, password, DB, keyPairs...)
 	if err != nil {
 		return nil, err
 	}
@@ -49,7 +48,7 @@ func NewStoreWithDB(size int, network, address, password, DB string, keyPairs ..
 //
 // Ref: https://godoc.org/github.com/boj/redistore#NewRediStoreWithPool
 func NewStoreWithPool(pool *redis.Pool, keyPairs ...[]byte) (Store, error) {
-	s, err := redistore.NewRediStoreWithPool(pool, keyPairs...)
+	s, err := NewRediStoreWithPool(pool, keyPairs...)
 	if err != nil {
 		return nil, err
 	}
@@ -57,12 +56,12 @@ func NewStoreWithPool(pool *redis.Pool, keyPairs ...[]byte) (Store, error) {
 }
 
 type store struct {
-	*redistore.RediStore
+	*RediStore
 }
 
 // GetRedisStore get the actual woking store.
 // Ref: https://godoc.org/github.com/boj/redistore#RediStore
-func GetRedisStore(s Store) (err error, rediStore *redistore.RediStore) {
+func GetRedisStore(s Store) (err error, rediStore *RediStore) {
 	realStore, ok := s.(*store)
 	if !ok {
 		err = errors.New("unable to get the redis store: Store isn't *store")

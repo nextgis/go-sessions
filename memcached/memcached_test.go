@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/bradfitz/gomemcache/memcache"
-	"github.com/gin-contrib/sessions"
-	"github.com/gin-contrib/sessions/tester"
-	"github.com/memcachier/mc"
+	"github.com/memcachier/mc/v3"
+	"github.com/nextgis/go-sessions"
+	"github.com/nextgis/go-sessions/tester"
 )
 
 const memcachedTestServer = "localhost:11211"

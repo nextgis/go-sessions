@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
-	"github.com/gin-contrib/sessions"
-	"github.com/gin-contrib/sessions/mongo/mongodriver"
 	"github.com/gin-gonic/gin"
+	"github.com/nextgis/go-sessions"
+	"github.com/nextgis/go-sessions/mongo/mongodriver"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )

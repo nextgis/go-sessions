@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/gin-contrib/sessions"
-	"github.com/gin-contrib/sessions/mongo/mongomgo"
 	"github.com/gin-gonic/gin"
 	"github.com/globalsign/mgo"
+	"github.com/nextgis/go-sessions"
+	"github.com/nextgis/go-sessions/mongo/mongomgo"
 )
 
 func main() {
