@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/memcachier/mc"
+	"github.com/memcachier/mc/v3"
 	"github.com/nextgis/go-sessions"
 	"github.com/nextgis/go-sessions/memcached"
 )

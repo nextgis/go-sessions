@@ -218,7 +218,7 @@ import (
   "github.com/nextgis/go-sessions"
   "github.com/nextgis/go-sessions/memcached"
   "github.com/gin-gonic/gin"
-  "github.com/memcachier/mc"
+  "github.com/memcachier/mc/v3"
 )
 
 func main() {
