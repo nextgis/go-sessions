@@ -16,7 +16,7 @@ require (
 	gorm.io/gorm v1.25.5
 )
 
-require github.com/memcachier/mc v2.0.1+incompatible // indirect
+require github.com/knz/go-libedit v1.10.1 // indirect
 
 require (
 	github.com/bytedance/sonic v1.10.2 // indirect
