@@ -3,8 +3,6 @@ module github.com/nextgis/go-sessions
 go 1.21
 
 require (
-	github.com/bradfitz/gomemcache v0.0.0-20230905024940-24af94b03874
-	github.com/bradleypeabody/gorilla-sessions-memcache v0.0.0-20181103040241-659414f458e1
 	github.com/gin-gonic/gin v1.10.0
 	github.com/gomodule/redigo v1.9.2
 	github.com/gorilla/context v1.1.2
@@ -20,7 +18,6 @@ require (
 	github.com/cloudwego/base64x v0.1.4 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
-	github.com/memcachier/mc v2.0.1+incompatible // indirect
 )
 
 require (
@@ -39,7 +36,6 @@ require (
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mattn/go-sqlite3 v1.14.22 // indirect
-	github.com/memcachier/mc/v3 v3.0.3
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.2 // indirect
