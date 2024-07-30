@@ -11,7 +11,8 @@ Gin middleware for session management with multi-backend support:
 - [cookie-based](#cookie-based)
 - [Redis](#redis)
 - [memcached](#memcached)
-- [GoRM](#gorm)
+- [MongoDB](#mongodb)
+- [GORM](#gorm)
 - [memstore](#memstore)
 
 ## Usage
@@ -279,7 +280,7 @@ func main() {
 }
 ```
 
-### GoRM
+### GORM
 
 ```go
 package main
