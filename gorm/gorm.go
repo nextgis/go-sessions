@@ -12,12 +12,13 @@ type Store interface {
 	sessions.Store
 }
 
-func NewStore(d *gorm.DB, expiredSessionCleanup bool, keyPairs ...[]byte) Store {
+func NewStore(d *gorm.DB, expiredSessionCleanup bool, maxKeyLength int, keyPairs ...[]byte) Store {
 	s := gormstore.New(d, keyPairs...)
 	if expiredSessionCleanup {
 		quit := make(chan struct{})
 		go s.PeriodicCleanup(1*time.Hour, quit)
 	}
+	s.MaxLength(maxKeyLength)
 	return &store{s}
 }
 
