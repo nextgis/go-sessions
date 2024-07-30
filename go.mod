@@ -6,7 +6,7 @@ require (
 	github.com/bradfitz/gomemcache v0.0.0-20230905024940-24af94b03874
 	github.com/bradleypeabody/gorilla-sessions-memcache v0.0.0-20181103040241-659414f458e1
 	github.com/gin-gonic/gin v1.10.0
-	github.com/gomodule/redigo v2.0.0+incompatible
+	github.com/gomodule/redigo v1.9.2
 	github.com/gorilla/context v1.1.2
 	github.com/gorilla/sessions v1.3.0
 	github.com/quasoft/memstore v0.0.0-20191010062613-2bce066d2b0b
