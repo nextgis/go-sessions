@@ -17,7 +17,7 @@ var newStore = func(_ *testing.T) sessions.Store {
 	if err != nil {
 		panic(err)
 	}
-	return NewStore(db, true, []byte("secret"))
+	return NewStore(db, true, 4096, []byte("secret"))
 }
 
 func TestGorm_SessionGetSet(t *testing.T) {
